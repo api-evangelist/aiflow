@@ -1,0 +1,29 @@
+generated: '2026-09-14'
+method: searched
+source: https://www.veratainsight.com/pricing
+note: >-
+  No rate limits are published because there is no API to limit. Searched both brand sites for a
+  developer, documentation, API reference or limits page and found none; the pricing page states
+  there are "no per-query charges", which is a commercial statement about the web application and
+  not a documented technical limit. The only limiting behaviour observed was on the company's own
+  application host: https://app.veratainsight.com/ returned HTTP 429 on first request and HTTP 500
+  on subsequent ones, which is edge protection on a login-gated SPA, not a documented API limit.
+limit_count: 0
+limits: []
+response_headers:
+  documented: false
+  observed: []
+  detail: >-
+    No X-RateLimit-*, RateLimit-* or Retry-After headers are documented. None could be observed
+    against an API because no unauthenticated API endpoint exists.
+exhaustion_status_code: null
+retry_guidance: null
+observed_edge_behaviour:
+- host: app.veratainsight.com
+  status: 429
+  detail: First anonymous GET of the login-gated application root returned 429.
+  checked: '2026-09-14'
+- host: app.veratainsight.com
+  status: 500
+  detail: All subsequent anonymous requests to any path returned 500 Internal Server Error.
+  checked: '2026-09-14'

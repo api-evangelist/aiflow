@@ -64,5 +64,20 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-aiFlow is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+aiFlow (AiFlow, Inc., Y Combinator W23) is a San Francisco company building AI-powered executive
+intelligence for private equity talent teams and executive search firms, founded in 2022 by Nick
+Manske and Josh Gardner. In 2025 the founders relaunched the product as **Verata, Inc.** at
+veratainsight.com; the aiFlow brand site and the company's identity tenant at
+`auth.aiflow.solutions` both remain live, and the Verata application authenticates against them.
+
+**aiFlow publishes no public API.** There is no developer portal, API reference, SDK, CLI, MCP
+server or A2A agent card, and no OpenAPI, GraphQL, AsyncAPI, gRPC or WSDL contract on any known
+host. The company's own security page states the platform is "self-contained by design" and
+"doesn't connect to third-party ATS or CRM systems", and data leaves it by Excel and CSV export.
+The only machine-readable documents it serves are the OpenID Connect and OAuth 2.0
+authorization-server discovery documents that gate its own web application.
+
+- Website (aiFlow brand): https://aiflow.solutions/
+- Website (current product): https://www.veratainsight.com/
+- Pricing: https://www.veratainsight.com/pricing
+- Security & data practices: https://www.veratainsight.com/security

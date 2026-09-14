@@ -1,0 +1,115 @@
+generated: '2026-09-14'
+method: probed
+source: >-
+  https://auth.aiflow.solutions/.well-known/openid-configuration ·
+  https://auth.aiflow.solutions/.well-known/oauth-authorization-server ·
+  https://www.veratainsight.com/security · https://www.veratainsight.com/gdpr-disclosure
+note: >-
+  aiFlow publishes no API contract, so every contract-derived conformance claim below is recorded
+  false or not-applicable rather than inferred. The true entries are all read from the OAuth/OIDC
+  discovery documents the company serves on its own Auth0 custom domain, auth.aiflow.solutions, and
+  they describe the identity layer that gates the Verata application — not a developer API.
+entries:
+- id: oidc
+  name: OpenID Connect Discovery 1.0
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/openid-configuration
+  detail: Serves a complete OIDC discovery document with issuer, jwks_uri, userinfo and claims_supported.
+- id: oauth2
+  name: OAuth 2.0 (RFC 6749)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/oauth-authorization-server
+  detail: Authorization code, client credentials, refresh token, device code and token exchange grants advertised.
+- id: rfc8414
+  name: OAuth 2.0 Authorization Server Metadata (RFC 8414)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/oauth-authorization-server
+  detail: Serves AS metadata at the RFC 8414 well-known path, HTTP 200 application/json.
+- id: rfc7636
+  name: PKCE (RFC 7636)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/openid-configuration
+  detail: code_challenge_methods_supported advertises S256 and plain; the live app login was observed using S256.
+- id: rfc9449
+  name: OAuth 2.0 Demonstrating Proof of Possession — DPoP (RFC 9449)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/openid-configuration
+  detail: dpop_signing_alg_values_supported advertises ES256.
+- id: rfc7591
+  name: OAuth 2.0 Dynamic Client Registration (RFC 7591)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/openid-configuration
+  detail: registration_endpoint published at https://auth.aiflow.solutions/oidc/register.
+- id: rfc7009
+  name: OAuth 2.0 Token Revocation (RFC 7009)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/openid-configuration
+  detail: revocation_endpoint published; a global token revocation endpoint is also advertised.
+- id: rfc8628
+  name: OAuth 2.0 Device Authorization Grant (RFC 8628)
+  conforms: true
+  evidence: https://auth.aiflow.solutions/.well-known/openid-configuration
+  detail: device_authorization_endpoint published and the device_code grant type is advertised.
+- id: rfc9126
+  name: OAuth 2.0 Pushed Authorization Requests (RFC 9126)
+  conforms: false
+  evidence: https://auth.aiflow.solutions/.well-known/oauth-authorization-server
+  detail: No pushed_authorization_request_endpoint in the AS metadata.
+- id: rfc9101
+  name: OAuth 2.0 JWT-Secured Authorization Request (RFC 9101)
+  conforms: false
+  evidence: https://auth.aiflow.solutions/.well-known/oauth-authorization-server
+  detail: request_parameter_supported and request_uri_parameter_supported are both false.
+- id: fapi
+  name: FAPI 1.0 / 2.0
+  conforms: false
+  evidence: https://auth.aiflow.solutions/.well-known/oauth-authorization-server
+  detail: >-
+    Not claimed and not met — the implicit and password grants are enabled, plain PKCE is
+    permitted, and HS256 is an accepted ID token signing algorithm.
+- id: rfc9457
+  name: Problem Details for HTTP APIs (RFC 9457)
+  conforms: false
+  evidence: https://www.veratainsight.com/security
+  detail: No API and no published error format.
+- id: openapi
+  name: OpenAPI Specification
+  conforms: false
+  evidence: https://www.veratainsight.com/
+  detail: No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, gRPC or WSDL contract found on any known host.
+- id: scim
+  name: SCIM 2.0
+  conforms: false
+  evidence: https://www.veratainsight.com/security
+  detail: No SCIM schema URN or provisioning surface published.
+- id: pagination
+  name: Documented pagination convention
+  conforms: false
+  evidence: https://www.veratainsight.com/
+  detail: Not applicable — no API surface.
+- id: idempotency
+  name: Documented idempotency mechanism
+  conforms: false
+  evidence: https://www.veratainsight.com/
+  detail: Not applicable — no API write surface.
+domain_standard:
+  applicable: false
+  detail: >-
+    The market is private-equity talent intelligence and executive search. No machine-readable
+    contract exists to inspect for a domain-standard signature (HR Open Standards, schema.org
+    JobPosting, or similar), so no domain-standard conformance is asserted. Reward-only check —
+    recorded as not applicable rather than failed.
+privacy_program:
+  gdpr_disclosure_published: true
+  gdpr_disclosure_url: https://www.veratainsight.com/gdpr-disclosure
+  opt_out_published: true
+  opt_out_url: https://www.veratainsight.com/opt-out
+  privacy_policy_url: https://www.veratainsight.com/privacy
+  detail: >-
+    A published privacy policy, a GDPR disclosure and a working subject opt-out/deletion process are
+    documented on the security page. These are stated data practices, NOT audited certifications —
+    no SOC 2, ISO 27001, PCI, HIPAA or FedRAMP attestation is named anywhere on the site, so no
+    Compliance pointer is emitted.
+summary:
+  asserted: 16
+  conforming: 8

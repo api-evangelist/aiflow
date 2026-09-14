@@ -1,0 +1,98 @@
+# aiFlow
+
+> aiFlow (AiFlow, Inc., Y Combinator W23) is a San Francisco company building AI-powered executive
+> intelligence for private equity talent teams and executive search firms. In 2025 its founders
+> relaunched the product as Verata, Inc. at veratainsight.com. aiFlow publishes no public API,
+> no developer program and no machine-readable API contract.
+
+generated: 2026-09-14
+method: generated
+source: apis.yml and the probed artifacts in this repository; no provider-published llms.txt exists
+  (https://aiflow.solutions/llms.txt and https://www.veratainsight.com/llms.txt both return 404).
+
+## What this company does
+
+aiFlow reads public sources — company websites, press, deal announcements and professional profiles
+— to produce data-driven evaluations of C-level and board candidates. The platform covers executive
+research, revenue estimates with a published comparable-company methodology, transaction and funding
+history, backchannel and reference discovery, candidate pipeline and search management, AI interview
+synthesis and scoring, and board-deck generation. Buyers are PE talent partners, firm leadership,
+search firm partners, researchers and in-house recruiting teams.
+
+Founded 2022 in San Francisco by Nick Manske and Josh Gardner. Y Combinator Winter 2023.
+
+## Brand and entity
+
+The aiFlow brand site remains live at https://aiflow.solutions/. The operating product today is
+Verata, at https://www.veratainsight.com/. The two are one company: the Verata application at
+app.veratainsight.com authenticates against the original aiFlow Auth0 tenant at
+auth.aiflow.solutions, and the founders are the same.
+
+## API status — read this before looking for one
+
+There is no aiFlow or Verata API.
+
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, gRPC/Protobuf or WSDL contract is published on any
+  known host.
+- No developer portal, API reference, getting-started guide, SDK, CLI, Postman collection or
+  changelog exists.
+- No MCP server and no A2A agent card. /.well-known/agent-card.json and /.well-known/agent.json
+  return 404 on every host.
+- No API access is offered at any pricing tier. The security page states the platform is
+  "self-contained by design" and "doesn't connect to third-party ATS or CRM systems. There are no
+  integration credentials to manage and no third-party data paths to review."
+- Data leaves the platform by Excel and CSV export, which is a user-interface feature.
+
+## The one machine-readable surface
+
+The company serves standard OpenID Connect and OAuth 2.0 authorization-server discovery documents on
+its own Auth0 custom domain. These gate sign-in to the web application; they are not an API.
+
+- https://auth.aiflow.solutions/.well-known/openid-configuration (HTTP 200)
+- https://auth.aiflow.solutions/.well-known/oauth-authorization-server (HTTP 200)
+
+Issuer: https://auth.aiflow.solutions/. Authorization code with PKCE (S256), client credentials,
+refresh token, device code and token exchange grants. DPoP (ES256), dynamic client registration,
+token revocation and MFA are advertised. Scopes are the standard OIDC identity set plus
+offline_access — there are no product or resource scopes.
+
+## Pricing
+
+Three named tiers — Core, Firm and Enterprise — with no published prices and no self-serve signup.
+Every tier is "Talk to Us"; billing is an annual platform agreement, invoiced, scoped after a
+conversation. The pricing page explicitly declines to publish a rate card.
+
+- https://www.veratainsight.com/pricing
+
+## Security and privacy posture
+
+No SOC 2, ISO 27001, PCI, HIPAA or FedRAMP attestation is named. The company publishes a privacy
+policy, a GDPR disclosure and a working subject opt-out and deletion process, and states it completes
+customer security questionnaires directly. No security.txt and no bug bounty program were found.
+
+- https://www.veratainsight.com/security
+- https://www.veratainsight.com/gdpr-disclosure
+- https://www.veratainsight.com/opt-out
+
+## Links
+
+- Website (aiFlow brand): https://aiflow.solutions/
+- Website (current product): https://www.veratainsight.com/
+- About: https://www.veratainsight.com/company/about
+- Contact: https://www.veratainsight.com/company/contact
+- Pricing: https://www.veratainsight.com/pricing
+- Insights: https://www.veratainsight.com/resources/insights
+- Terms of Service: https://www.veratainsight.com/terms
+- Privacy Policy: https://www.veratainsight.com/privacy
+
+## Artifacts in this repository
+
+- well-known/aiflow-well-known.yml — 7 hosts x 8 paths probed, 2 documents served
+- well-known/aiflow-openid-configuration.json — verbatim
+- well-known/aiflow-oauth-authorization-server.json — verbatim
+- authentication/aiflow-authentication.yml — application sign-in profile, probed
+- scopes/aiflow-scopes.yml — 14 published OIDC identity scopes, probed
+- conformance/aiflow-conformance.yml — 16 assertions, 8 conforming
+- security/aiflow-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC, probed
+- plans/aiflow-plans-pricing.yml — 3 tiers, no published prices
+- rate-limits/aiflow-rate-limits.yml — none published

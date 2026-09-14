@@ -1,0 +1,83 @@
+generated: '2026-09-14'
+method: searched
+source: https://www.veratainsight.com/pricing
+note: >-
+  Three named deployment tiers are published, but NO prices, no rate card and no self-serve signup.
+  Every tier's call to action is "Talk to Us", and the pricing page answers the question directly:
+  "Why don't you publish a rate card? Because the value of centralized market intelligence is very
+  different for a three-person boutique and a firm with 75 portfolio companies." Billing is annual
+  platform agreements, invoiced, scoped after a conversation. Tiers are recorded because they are
+  genuinely published and named; all price fields are null because the provider publishes none.
+  aiFlow's own legacy brand site publishes no pricing page at all.
+pricing_model: sales-scoped annual platform agreement
+currency: null
+public_rate_card: false
+self_serve_signup: false
+free_tier: false
+trial: >-
+  A structured pilot with agreed success criteria is described as part of the buying process, not as
+  a self-serve trial.
+billing_period: annual
+billing_note: Annual platform agreements, invoiced. Not per-seat and not per-query.
+plan_count: 3
+plans:
+- name: Core
+  price: null
+  price_note: Not published — "Talk to Us".
+  currency: null
+  billing_period: annual
+  audience: Boutique search firms and emerging managers
+  included:
+  - Full platform access — no feature tiers
+  - Guided onboarding on live searches
+  - Direct line to the Verata team
+  quota: null
+  overage: null
+  limits: null
+- name: Firm
+  price: null
+  price_note: Not published — "Talk to Us".
+  currency: null
+  billing_period: annual
+  audience: Mid-market PE firms and established search firms
+  included:
+  - Seats for talent partners, researchers and portfolio talent leaders
+  - Native search management — no ATS to integrate
+  - Quarterly business reviews against agreed success criteria
+  - Scoped to portfolio size and breadth of rollout
+  quota: null
+  overage: null
+  limits: null
+- name: Enterprise
+  price: null
+  price_note: Not published — "Talk to Us".
+  currency: null
+  billing_period: annual
+  audience: Large-cap firms with bespoke requirements
+  included:
+  - White-glove onboarding across the talent function
+  - Security, legal and vendor-diligence support
+  - Custom data and workflow requests
+  quota: null
+  overage: null
+  limits: null
+included_in_every_tier:
+- Full company and executive intelligence database
+- AI-powered industry and executive search
+- Revenue estimates with transparent methodology
+- Transaction and funding history
+- Backchannel and reference discovery
+- Project management and saved searches
+- Excel and CSV exports
+- Dedicated support
+- Search management and candidate pipeline
+- AI interview synthesis and scoring
+- Search firm performance tracking
+- Board deck and report generation
+- Direct contact information (email, phone when available)
+api_access:
+  offered_at_any_tier: false
+  detail: >-
+    No tier includes API access. The published feature list for every tier ends at Excel and CSV
+    export, and the security page states the platform is "self-contained by design" and "doesn't
+    connect to third-party ATS or CRM systems. There are no integration credentials to manage."

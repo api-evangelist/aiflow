@@ -1,17 +1,34 @@
 aid: aiflow
 name: aiFlow
-description: 'aiFlow is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  aiFlow (AiFlow, Inc., Y Combinator W23) is a San Francisco company building AI-powered executive
+  intelligence for private equity talent teams and executive search firms, founded in 2022 by Nick
+  Manske and Josh Gardner. Its platform reads public sources — company sites, press, deal
+  announcements and professional profiles — to generate data-driven evaluations of C-level and board
+  candidates, revenue estimates with published comparable-company methodology, transaction and funding
+  history, backchannel and reference discovery, and search management. In 2025 the founders relaunched
+  the product as Verata, Inc. at veratainsight.com; the aiFlow brand site and the company's Auth0
+  identity tenant at auth.aiflow.solutions both remain live and the Verata application authenticates
+  against them. aiFlow publishes no developer program, no API documentation and no machine-readable
+  API contract — its security page states the platform is self-contained by design with no
+  third-party ATS or CRM integrations — so the only machine-readable documents it serves are the
+  OpenID Connect and OAuth 2.0 authorization-server discovery documents that gate its own application.
+image: https://res.cloudinary.com/verdiq/image/upload/v1769805304/verata/verata_private_equity_firm_network_paths.png
 url: https://raw.githubusercontent.com/api-evangelist/aiflow/refs/heads/main/apis.yml
-x-type: company
-x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-14'
 modified: '2026-09-14'
 tags:
 - Company
+- Executive Search
+- Private Equity
+- Talent Intelligence
+- People Data
+- Company Data
+- Market Intelligence
+- Artificial Intelligence
+- Y Combinator
+- No Public API
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,78 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aiflow-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://aiflow.solutions/
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: Website
+  url: https://www.veratainsight.com/
+  x-note: Current operating brand. AiFlow, Inc. (YC W23) relaunched as Verata, Inc. in
+    2025 under the same founders; app.veratainsight.com authenticates against the company's
+    original Auth0 tenant at auth.aiflow.solutions, which is the evidence tying the two brands
+    to one company.
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: Pricing
+  url: https://www.veratainsight.com/pricing
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: Support
+  url: https://www.veratainsight.com/company/contact
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: Blog
+  url: https://www.veratainsight.com/resources/insights
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: TermsOfService
+  url: https://www.veratainsight.com/terms
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: PrivacyPolicy
+  url: https://www.veratainsight.com/privacy
+  x-http-status: 200
+  x-checked: '2026-09-14'
+- type: WellKnown
+  url: well-known/aiflow-well-known.yml
+- type: Authentication
+  url: authentication/aiflow-authentication.yml
+- type: OAuthScopes
+  url: scopes/aiflow-scopes.yml
+- type: Conformance
+  url: conformance/aiflow-conformance.yml
+- type: Plans
+  url: plans/aiflow-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aiflow-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aiflow-llms.txt
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 10
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    aiFlow ships only an end-user web application — the word "API" does not appear anywhere on the
+    aiflow.solutions or veratainsight.com sites, and the company's own security page states the
+    platform is "self-contained by design" with "no integration credentials to manage", so data
+    leaves it by Excel and CSV export rather than through any interface.
+  evidence:
+  - url: https://www.veratainsight.com/
+    status: 200
+  - url: https://www.veratainsight.com/pricing
+    status: 200
+  - url: https://www.veratainsight.com/security
+    status: 200
+  - url: https://aiflow.solutions/llms.txt
+    status: 404
+  - url: https://aiflow.solutions/.well-known/api-catalog
+    status: 404
+  - url: https://auth.aiflow.solutions/.well-known/openid-configuration
+    status: 200
+  checked: '2026-09-14'

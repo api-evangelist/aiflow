@@ -1,0 +1,60 @@
+generated: '2026-09-14'
+method: probed
+source: https://auth.aiflow.solutions/.well-known/openid-configuration
+note: >-
+  These are the scopes_supported advertised by the company's own Auth0 authorization server at
+  auth.aiflow.solutions, read verbatim from its discovery document. They are the standard OIDC
+  identity scopes plus offline_access — they govern sign-in to the Verata application and the claims
+  released about the signed-in user. aiFlow publishes NO API permission or scope reference, and no
+  product-specific or resource-specific scopes are advertised; a developer cannot request access to
+  any aiFlow data surface with these. Recorded as published identity scopes, not as an API
+  authorization model.
+issuer: https://auth.aiflow.solutions/
+docs: null
+docs_note: No scopes or permissions reference page is published on aiflow.solutions or veratainsight.com.
+scope_type: oidc-identity
+api_scopes_published: false
+scope_count: 14
+scopes:
+- name: openid
+  description: Required OIDC scope; requests an ID token for the authenticating user.
+  category: identity
+- name: profile
+  description: Releases the default profile claims (name, family_name, given_name, nickname, picture, created_at).
+  category: identity
+- name: offline_access
+  description: Requests a refresh token so the application can renew access without re-prompting the user.
+  category: session
+- name: name
+  description: Releases the user's full name claim.
+  category: identity
+- name: given_name
+  description: Releases the user's given name claim.
+  category: identity
+- name: family_name
+  description: Releases the user's family name claim.
+  category: identity
+- name: nickname
+  description: Releases the user's nickname claim.
+  category: identity
+- name: email
+  description: Releases the user's email address claim.
+  category: identity
+- name: email_verified
+  description: Releases whether the user's email address has been verified.
+  category: identity
+- name: picture
+  description: Releases the user's profile picture URL.
+  category: identity
+- name: created_at
+  description: Releases the timestamp the user account was created.
+  category: identity
+- name: identities
+  description: Releases the linked identity-provider connections for the user.
+  category: identity
+- name: phone
+  description: Releases the user's phone number claim.
+  category: identity
+- name: address
+  description: Releases the user's address claim.
+  category: identity
