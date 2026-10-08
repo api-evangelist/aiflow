@@ -81,3 +81,27 @@ api_access:
     No tier includes API access. The published feature list for every tier ends at Excel and CSV
     export, and the security page states the platform is "self-contained by design" and "doesn't
     connect to third-party ATS or CRM systems. There are no integration credentials to manage."
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Core
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Firm
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
