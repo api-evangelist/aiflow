@@ -13,6 +13,26 @@ description: >-
   API contract — its security page states the platform is self-contained by design with no
   third-party ATS or CRM integrations — so the only machine-readable documents it serves are the
   OpenID Connect and OAuth 2.0 authorization-server discovery documents that gate its own application.
+accessModel:
+  pricing: enterprise
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  gated: private
+  gated_source:
+  - tag:No Public API
+  label: Enterprise · Requires approval
+  confidence: high
+  probe_state: none
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  generated: '2026-10-09'
+  method: derived
 image: https://res.cloudinary.com/verdiq/image/upload/v1769805304/verata/verata_private_equity_firm_network_paths.png
 url: https://raw.githubusercontent.com/api-evangelist/aiflow/refs/heads/main/apis.yml
 specificationVersion: '0.20'
@@ -28,7 +48,6 @@ tags:
 - Market Intelligence
 - Artificial Intelligence
 - Y Combinator
-- No Public API
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -111,3 +130,5 @@ x-coverage:
   - url: https://auth.aiflow.solutions/.well-known/openid-configuration
     status: 200
   checked: '2026-09-14'
+x-tags-removed:
+- No Public API
