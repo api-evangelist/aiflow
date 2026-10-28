@@ -64,20 +64,103 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-aiFlow (AiFlow, Inc., Y Combinator W23) is a San Francisco company building AI-powered executive
-intelligence for private equity talent teams and executive search firms, founded in 2022 by Nick
-Manske and Josh Gardner. In 2025 the founders relaunched the product as **Verata, Inc.** at
-veratainsight.com; the aiFlow brand site and the company's identity tenant at
-`auth.aiflow.solutions` both remain live, and the Verata application authenticates against them.
+aiFlow (AiFlow, Inc., Y Combinator W23) is a San Francisco company building AI-powered executive intelligence for private equity talent teams and executive search firms, founded in 2022 by Nick Manske and Josh Gardner. Its platform reads public sources — company sites, press, deal announcements and professional profiles — to generate data-driven evaluations of C-level and board candidates, revenue estimates with published comparable-company methodology, transaction and funding history, backchannel and reference discovery, and search management. In 2025 the founders relaunched the product as Verata, Inc. at veratainsight.com; the aiFlow brand site and the company's Auth0 identity tenant at auth.aiflow.solutions both remain live and the Verata application authenticates against them. aiFlow publishes no developer program, no API documentation and no machine-readable API contract — its security page states the platform is self-contained by design with no third-party ATS or CRM integrations — so the only machine-readable documents it serves are the OpenID Connect and OAuth 2.0 authorization-server discovery documents that gate its own application.
 
-**aiFlow publishes no public API.** There is no developer portal, API reference, SDK, CLI, MCP
-server or A2A agent card, and no OpenAPI, GraphQL, AsyncAPI, gRPC or WSDL contract on any known
-host. The company's own security page states the platform is "self-contained by design" and
-"doesn't connect to third-party ATS or CRM systems", and data leaves it by Excel and CSV export.
-The only machine-readable documents it serves are the OpenID Connect and OAuth 2.0
-authorization-server discovery documents that gate its own web application.
+**Areas:** Company · Executive Search · Private Equity · Talent Intelligence · People Data · Company Data · Market Intelligence · Artificial Intelligence · Y Combinator
 
-- Website (aiFlow brand): https://aiflow.solutions/
-- Website (current product): https://www.veratainsight.com/
-- Pricing: https://www.veratainsight.com/pricing
-- Security & data practices: https://www.veratainsight.com/security
+## aiFlow on APIs.io
+
+Everything profiled for aiFlow is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aiflow/](https://apis.io/providers/aiflow/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aiflow Authentication](https://apis.io/security/aiflow/aiflow-authentication/)
+- [Aiflow Domain Security](https://apis.io/security/aiflow/aiflow-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Aiflow Scopes](https://apis.io/scopes/aiflow/aiflow-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aiflow Plans Pricing](https://apis.io/plans/aiflow/aiflow-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aiflow Rate Limits](https://apis.io/rate-limits/aiflow/aiflow-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aiflow.solutions/)
+- [Pricing](https://www.veratainsight.com/pricing)
+- [Support](https://www.veratainsight.com/company/contact)
+- [Blog](https://www.veratainsight.com/resources/insights)
+- [Terms of service](https://www.veratainsight.com/terms)
+- [Privacy policy](https://www.veratainsight.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 24.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 63.2 |
+
+**Agent readiness 17.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 31.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aiflow/](https://apis.io/providers/aiflow/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for aiFlow: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aiflow/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
